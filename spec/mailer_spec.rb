@@ -1,4 +1,4 @@
-require_relative '../mailer'
+require_relative '../lib/helpers/mailer'
 
 describe Mailer do
   before { Mailer.stub(:send_me_email).with 'quoting' }

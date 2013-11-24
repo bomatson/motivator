@@ -1,4 +1,4 @@
-require_relative '../crawler'
+require_relative '../lib/helpers/crawler'
 
 describe Crawler do
   context 'given a url' do
