@@ -1,5 +1,4 @@
 require_relative '../crawler'
-require 'rspec'
 
 describe Crawler do
   context 'given a url' do

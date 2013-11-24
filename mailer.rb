@@ -1,6 +1,6 @@
 require 'pony'
 
-class Mailer
+module Mailer
   def send_me_email(quote)
     Pony.mail(to: 'bobby.matson@gmail.com',
               subject: 'Quote of the Day',

@@ -1,5 +1,4 @@
 require_relative '../mailer'
-require 'rspec'
 
 describe Mailer do
   before { Mailer.stub(:send_me_email).with 'quoting' }

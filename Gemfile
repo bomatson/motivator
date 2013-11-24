@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+ruby '2.0.0'
+gem 'mechanize'
+gem 'pony'
+gem 'byebug'
+gem 'rspec', require: 'spec'
