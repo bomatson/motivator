@@ -1,11 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    byebug (2.2.2)
-      columnize (~> 0.3.6)
-      debugger-linecache (~> 1.2.0)
-    columnize (0.3.6)
-    debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     domain_name (0.5.15)
       unf (>= 0.0.5, < 1.0.0)
@@ -53,7 +48,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   mechanize
   pony
   rspec

@@ -1,8 +1,3 @@
-require 'bundler/setup'
-
-require_relative 'crawler'
-require_relative 'mailer'
-
 class Motivator
   include Crawler
   include Mailer
@@ -20,6 +15,3 @@ class Motivator
     end
   end
 end
-
-self_esteem = Motivator.new('http://onboardly.com/content-marketing/101-kickass-startup-quote')
-self_esteem.encourage!
