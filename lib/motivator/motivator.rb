@@ -1,5 +1,4 @@
 class Motivator
-  include Crawler
   include Mailer
 
   def initialize(url)
@@ -7,7 +6,8 @@ class Motivator
   end
 
   def encourage!
-    quote = snatch(@url)
+    crawler = Crawler.new
+    quote = crawler.snatch(@url)
     if send_me_email(quote)
       p 'Email sent!'
     else

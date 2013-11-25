@@ -1,14 +1,18 @@
 require 'mechanize'
 
-module Crawler
+class Crawler
+  attr_accessor :page
+
   def snatch(url)
     agent = Mechanize.new
-    page = agent.get(url)
-    fetch_quote_from(page)
+    @page = agent.get(url)
+    fetch_quote
   end
 
-  def fetch_quote_from(page)
-    quotes = page.search('ol p').map(&:text)
+  private
+
+  def fetch_quote
+    quotes = @page.search('ol p').map(&:text)
     quotes.sample
   end
 end

@@ -1,4 +1,4 @@
-require_relative '../lib/motivator/motivator'
+require_relative '../lib/motivator'
 
 describe Motivator do
   context '#encourage!' do
