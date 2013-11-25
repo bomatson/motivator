@@ -6,7 +6,7 @@ class Crawler
   def snatch(url)
     agent = Mechanize.new
     @page = agent.get(url)
-    fetch_quote
+    fetch_quote.gsub(/ Click to Tweet/, '')
   end
 
   private
