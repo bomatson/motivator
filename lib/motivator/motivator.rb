@@ -1,9 +1,7 @@
 class Motivator
   include Mailer
 
-  def initialize(url)
-    @url ||= url
-  end
+  attr_accessor :url
 
   def encourage!
     crawler = Crawler.new
