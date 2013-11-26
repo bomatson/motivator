@@ -8,7 +8,7 @@ class Motivator
   def encourage!
     crawler = Crawler.new
     quote = crawler.snatch(@url)
-    if send_me_email(quote)
+    if Mailer.send_me_email(quote)
       p 'Email sent!'
     else
       p 'Email failed :('
