@@ -2,8 +2,8 @@ require 'pony'
 
 module Mailer
   class << self
-    def send_me_email(quote)
-      Pony.mail(to: 'bobby.matson@gmail.com',
+    def send_email(quote, recipients)
+      Pony.mail(to: recipients,
                 subject: 'Quote of the Day',
                 body: quote,
                 via: :smtp,
