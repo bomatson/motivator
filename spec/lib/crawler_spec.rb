@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'fakeweb'
-require_relative '../lib/helpers/crawler'
 
 describe Crawler do
   context '.snatch' do
