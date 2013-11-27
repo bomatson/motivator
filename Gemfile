@@ -3,6 +3,11 @@ source 'https://rubygems.org'
 gem 'mechanize'
 gem 'pony'
 gem 'sinatra'
+gem 'dm-core'
+gem 'dm-timestamps'
+gem 'dm-migrations'
+gem 'dm-sqlite-adapter'
+gem 'dm-postgres-adapter'
 
 group :development, :test do
   gem 'sqlite3'
