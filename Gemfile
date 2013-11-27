@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 gem 'mechanize'
 gem 'pony'
+gem 'sinatra'
 gem 'fakeweb'
 gem 'rspec', require: 'spec'
+gem 'rack-test'

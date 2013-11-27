@@ -1,4 +1,4 @@
-require_relative '../lib/helpers/mailer'
+require 'spec_helper'
 
 describe Mailer do
   context '.send_mail' do

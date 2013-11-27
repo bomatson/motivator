@@ -1,4 +1,4 @@
-require_relative '../lib/motivator'
+require 'spec_helper'
 
 describe Motivator do
   let(:motivator) { double(Motivator) }
