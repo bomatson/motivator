@@ -1,2 +1,5 @@
-require './app/app.rb'
+require './app.rb'
+
+set :environment, :production
+
 run Sinatra::Application
