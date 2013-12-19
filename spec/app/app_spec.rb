@@ -1,8 +1,10 @@
 require 'spec_helper'
 
 describe 'Sinatra App' do
-  it 'repsonds to root get' do
-    get '/'
-    expect(last_response.body).to match(/Testing/)
+  context 'home page' do
+    it 'display a form' do
+      get '/'
+      expect(last_response.body).to match(/Testing/)
+    end
   end
 end

@@ -1,4 +1,10 @@
 require 'sinatra'
+require 'sqlite3'
+require 'pg'
+require 'dm-core'
+require 'dm-timestamps'
+require 'dm-migrations'
+require './lib/motivator'
 
 configure do
   DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/app.db")
@@ -7,7 +13,8 @@ end
 class Recipient
   include DataMapper::Resource
 
-  property :email
+  property :id,    Serial
+  property :email, String
 end
 
 configure :development do
@@ -19,5 +26,5 @@ before do
 end
 
 get '/' do
-  'Testing'
+  haml :home
 end
