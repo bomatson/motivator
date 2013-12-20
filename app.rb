@@ -1,9 +1,11 @@
 require 'sinatra'
+require 'haml'
 require 'sqlite3'
 require 'pg'
 require 'dm-core'
 require 'dm-timestamps'
 require 'dm-migrations'
+require 'dm-validations'
 require './lib/motivator'
 
 configure do
@@ -15,6 +17,8 @@ class Recipient
 
   property :id,    Serial
   property :email, String
+
+  validates_presence_of :email
 end
 
 configure :development do
@@ -27,4 +31,18 @@ end
 
 get '/' do
   haml :home
+end
+
+post '/create' do
+  @recipient = Recipient.new(params[:recipient])
+  if @recipient.save
+    redirect "/show/#{@recipient.id}"
+  else
+    redirect('/')
+  end
+end
+
+get '/show/:id' do
+  @recipient = Recipient.get(params[:id])
+  haml :show
 end

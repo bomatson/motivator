@@ -1,1 +1,9 @@
-%p Testing
+%h1 the motivator
+%h3 motivational quotes delivered to your inbox every morning at 8:30 am PST
+
+%form{ action: '/create', method: 'post', id: 'recipient', enctype: 'multipart/form-data' }
+  %label e-mail addy, plz
+  %input{ type: 'text', name: 'recipient[email]', id: 'email' }
+    %span
+      %button{ type: 'submit' } yes!
+

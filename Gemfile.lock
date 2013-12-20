@@ -20,6 +20,8 @@ GEM
       do_sqlite3 (~> 0.10.6)
     dm-timestamps (1.2.0)
       dm-core (~> 1.2.0)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
     do_postgres (0.10.13)
       data_objects (= 0.10.13)
     do_sqlite3 (0.10.13)
@@ -90,6 +92,7 @@ DEPENDENCIES
   dm-postgres-adapter
   dm-sqlite-adapter
   dm-timestamps
+  dm-validations
   fakeweb
   haml
   mechanize
