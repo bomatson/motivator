@@ -11,14 +11,15 @@ describe 'Motivator' do
   end
 
   context 'when submitting the form successfully' do
-    let(:recipient) { Recipient.new(email: 'something@sample.com') }
+    let(:recipient) { Recipient.new(id: 1, email: 'something@sample.com') }
 
     before do
       post '/create',
-        { recipient: { emai: recipient.email } }
+        { recipient: { email: recipient.email } }
     end
 
     it 'redirects to the recipient show' do
+      follow_redirect!
       expect(last_response.body).to include recipient.email
     end
   end
