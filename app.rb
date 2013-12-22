@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/flash'
 require 'haml'
 require 'sqlite3'
 require 'pg'
@@ -27,6 +28,8 @@ before do
   headers "Content-Type" => "text/html; charset=utf-8"
 end
 
+enable :sessions
+
 get '/' do
   haml :home
 end
@@ -36,6 +39,7 @@ post '/create' do
   if @recipient.save
     redirect "/show/#{@recipient.id}"
   else
+    flash[:error] = @recipient.errors.full_messages.join(",")
     redirect('/')
   end
 end

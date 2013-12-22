@@ -2,6 +2,9 @@
 %h3 motivational quotes delivered to your inbox every morning at 8:30 am PST
 
 %form{ action: '/create', method: 'post', id: 'recipient', enctype: 'multipart/form-data' }
+  - if flash[:error]
+    %p= flash[:error]
+
   %label e-mail addy, plz
   %input{ type: 'text', name: 'recipient[email]', id: 'email' }
     %span
