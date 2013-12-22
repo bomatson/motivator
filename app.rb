@@ -16,9 +16,7 @@ class Recipient
   include DataMapper::Resource
 
   property :id,    Serial
-  property :email, String
-
-  validates_presence_of :email
+  property :email, String, required: true, unique: true, format: :email_address
 end
 
 configure :development do
