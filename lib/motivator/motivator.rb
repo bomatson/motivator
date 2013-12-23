@@ -12,4 +12,9 @@ class Motivator
       p 'Email failed :('
     end
   end
+
+  def fetch_recipients
+    current_recipients = Recipient.all.map(&:email)
+    @recipients = current_recipients
+  end
 end
