@@ -11,6 +11,9 @@ require './lib/motivator'
 
 configure do
   DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/app.db")
+
+  enable :sessions
+  set :session_secret, ENV['SESSION_SECRET']
 end
 
 class Recipient
@@ -27,8 +30,6 @@ end
 before do
   headers "Content-Type" => "text/html; charset=utf-8"
 end
-
-enable :sessions
 
 get '/' do
   haml :root
