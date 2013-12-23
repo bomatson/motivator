@@ -31,7 +31,7 @@ end
 enable :sessions
 
 get '/' do
-  haml :home
+  haml :root
 end
 
 post '/create' do
