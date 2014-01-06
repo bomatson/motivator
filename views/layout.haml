@@ -4,10 +4,10 @@
     %title= @title || 'Motivator'
     %link{href: 'stylesheets/root.css', rel: 'stylesheet', type: 'text/css'}
   %body
-    #container
-      #header
-        #logo
+    .container
+      .header
+        .logo
           %h1
             %a{href: '/' }
-      #content= yield
-      #footer
+      .content= yield
+      .footer
