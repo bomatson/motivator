@@ -3,8 +3,10 @@
   %head
     %title= @title || 'Motivator'
     %link{href: 'stylesheets/root.css', rel: 'stylesheet', type: 'text/css'}
+    %link{href: 'stylesheets/animation.css', rel: 'stylesheet', type: 'text/css'}
+    %script(src="/root.js")
   %body
-    .container
+    .container.animated.bounceInDown
       .header
         .logo
           %h1

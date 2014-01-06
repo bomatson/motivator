@@ -3,9 +3,11 @@ require 'spec_helper'
 describe 'Motivator' do
   describe 'home page' do
     context 'when first visiting' do
+      let(:content) { "<div class='content'>" }
+
       it 'shows the form' do
         get '/'
-        expect(last_response.body).to include 'e-mail addy, plz'
+        expect(last_response.body).to include content
       end
     end
   end

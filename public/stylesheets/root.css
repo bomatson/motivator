@@ -14,17 +14,11 @@ body {
 
 .container  {
   position: absolute;
-  left: 55%;
-  top: 50%;
-  -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
+  left: 50%;
+  top: 30%;
+  margin-left: -30%;
 }
 
 .container h1 {
   font-size: 4em;
-}
-
-.recipient-form {
-  padding-left: 25%
 }
