@@ -1,0 +1,11 @@
+%h1 the best fucking quotes ever
+%h3 delivered to your inbox, every morning at 8:30 am PST
+
+.recipient-form
+  %form{ action: '/create', method: 'post', id: 'recipient', enctype: 'multipart/form-data' }
+    - if flash[:error]
+      %p= flash[:error]
+
+    %input{ class: 'box', type: 'text', name: 'recipient[email]', id: 'email' }
+    %input{ class: 'inward', type: 'submit', value: 'inspire me, for the love of god' }
+

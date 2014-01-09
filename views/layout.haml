@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title= @title || 'Motivator'
+    %link{href: 'stylesheets/root.css', rel: 'stylesheet', type: 'text/css'}
+    %link{href: 'stylesheets/animation.css', rel: 'stylesheet', type: 'text/css'}
+    %script(src="/root.js")
+  %body
+    .container.animated.bounceInDown
+      .header
+        .logo
+          %h1
+            %a{href: '/' }
+      .content= yield
+      .footer
