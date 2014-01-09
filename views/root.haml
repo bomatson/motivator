@@ -6,7 +6,6 @@
     - if flash[:error]
       %p= flash[:error]
 
-    %input{ type: 'text', name: 'recipient[email]', id: 'email' }
-      %span
-        %button{ type: 'submit' } inspire me!
+    %input{ class: 'box', type: 'text', name: 'recipient[email]', id: 'email' }
+    %input{ class: 'inward', type: 'submit', value: 'inspire me, for the love of god' }
 
